@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Passenger.destroy_all
+
+p = Passenger.create()
+t = Taxi.create()
+r = Ride.create(passenger: p, taxi: t)
